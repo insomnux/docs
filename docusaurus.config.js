@@ -35,11 +35,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {disableSwitch: true},
       navbar: {
-        title: 'Typecho',
+        title: '',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Typecho Logo',
+          src: 'img/typecho-logo.svg',
         },
         items: [
           {
@@ -56,7 +57,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
