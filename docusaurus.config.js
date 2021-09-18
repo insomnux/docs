@@ -11,8 +11,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'typecho', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
 
   presets: [
     [
@@ -41,16 +41,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         logo: {
           alt: 'Typecho Logo',
           src: 'img/typecho-logo.svg',
+          href: 'https://typecho.org',
         },
         items: [
           {
             type: 'doc',
             docId: 'start/home',
             position: 'left',
-            label: 'Docs',
+            label: '文档',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/typecho/docs',
             label: 'GitHub',
             position: 'right',
           },
