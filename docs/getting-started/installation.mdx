@@ -41,7 +41,7 @@ Apache 需要安装 `mod_php` 或者 `mod_fcgid` 模块，同时需要开启 `mo
 
 假如 Apache 的配置文件在 `/etc/apache2` 目录下，你可以创建 `/etc/apache2/sites-available/typecho.conf` 文件并添加以下配置：
 
-```apache
+```apacheconf
 <VirtualHost *:80>
     ServerName typecho.example.com
     DocumentRoot /srv/www/typecho
@@ -110,3 +110,75 @@ Typecho 支持以下数据库：
 :::note
 我们同时支持 MySQL 的其它分支，比如 MariaDB 和 Percona Server。但是，我们强烈建议你使用 MySQL 官方的版本，以获得更好的兼容性和性能。
 :::
+
+## 启动服务
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs defaultValue="docker" groupId="install">
+  <TabItem value="server" label="从服务器安装">
+
+从 [Typecho 的官方网站](https://typecho.org/download) 下载最新版本的 Typecho。
+
+```bash
+wget https://github.com/typecho/typecho/releases/latest/download/typecho.zip
+```
+
+解压 Typecho 到网页根目录：
+
+```bash
+unzip typecho.zip -d /srv/www/typecho
+```
+
+  </TabItem>
+
+  <TabItem value="docker" label="从 Docker 安装">
+
+你可以使用 Docker 快速部署 Typecho，只需要运行以下命令：
+
+```bash
+docker run -d -p 80:80 --name typecho -v ./typecho:/app/usr -e TYPECHO_SITE_URL=https://[你的域名] -d joyqi/typecho:latest
+```
+
+  </TabItem>
+
+  <TabItem value="docker-compose" label="从 Docker Compose 安装">
+
+你可以使用 Docker Compose 快速部署 Typecho，只需要编写以下 `docker-compose.yml` 文件：
+
+```yaml title="docker-compose.yml"
+version: '3.8'
+
+services:
+  typecho:
+    image: joyqi/typecho:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./typecho:/app/usr
+    environment:
+      - TYPECHO_SITE_URL=https://[你的域名]
+    restart: unless-stopped
+```
+
+然后运行以下命令：
+
+```bash
+docker-compose up -d
+```
+
+  </TabItem>
+</Tabs>
+
+在浏览器中访问 `https://[你的域名]/install.php`，按照提示完成安装。
+
+## 完成安装
+
+访问上述配置的域名，你将看到 Typecho 的安装界面：
+
+![Typecho 安装](./img/install-start.png)
+
+如果一切正常，你将看到 <kbd>我准备好了，开始下一步</kbd> 按钮，点击它继续。
+
+在后续的安装过程中，你需要填写数据库信息、管理员账号信息等，按照提示完成安装。

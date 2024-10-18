@@ -81,6 +81,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['apacheconf', 'nginx', 'php', 'bash'],
       },
     }),
   
@@ -93,6 +94,10 @@ const config = {
             to: '/getting-started/installation',
             from: '/install',
           },
+          {
+            to: '/getting-started/upgrade',
+            from: '/upgrade',
+          }
         ],
       }
     ]
