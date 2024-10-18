@@ -97,6 +97,10 @@ const config = {
           {
             to: '/getting-started/upgrade',
             from: '/upgrade',
+          },
+          {
+            to: '/getting-started/faq',
+            from: '/faq',
           }
         ],
       }

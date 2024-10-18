@@ -86,6 +86,7 @@ server {
         try_files $uri $uri/ /index.php?$args;
     }
     location ~ \.php$ {
+        try_files $uri =404;
         include fastcgi_params;
         # 这里需要根据实际情况修改
         fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
