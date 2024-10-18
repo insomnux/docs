@@ -39,3 +39,11 @@ $ GIT_USER=<Your GitHub username> pnpm deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### i18n
+
+This website is available in multiple languages. The default language is Simplified Chinese. To create a new language version, run:
+
+```
+$ pnpm write-translations --locale <locale>
+```

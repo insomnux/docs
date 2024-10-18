@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# 项目介绍
+# 介绍
 
 Typecho 是由两个单词 type 和 echo 组成的，在发音的时候也发这两个音 `/taɪpˌ'ekoʊ/`。
 
