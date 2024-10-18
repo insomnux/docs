@@ -61,12 +61,16 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: '文档',
+        title: 'Docs',
         logo: {
           alt: 'Typecho Logo',
           src: 'img/typecho-logo.svg',
         },
         items: [
+          {
+            href: 'https://typecho.org',
+            label: 'Home',
+          },
           {
             href: 'https://github.com/typecho/typecho',
             label: 'GitHub',
@@ -79,6 +83,20 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/getting-started/installation',
+            from: '/install',
+          },
+        ],
+      }
+    ]
+  ]
 };
 
 export default config;
