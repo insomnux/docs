@@ -31,12 +31,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
-    localeConfigs: {
-      'zh-Hans': {
-        label: '简体中文',
-      },
-    },
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -80,10 +75,6 @@ const config = {
             href: 'https://github.com/typecho/typecho',
             label: 'GitHub',
             position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
           }
         ],
       },
@@ -99,6 +90,10 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          {
+            to: '/contributing',
+            from: '/contribute',
+          },
           {
             to: '/getting-started/installation',
             from: '/install',
