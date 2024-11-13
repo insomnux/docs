@@ -9,7 +9,7 @@ Typecho is the combination of the words "type" and  "echo", pronounced as:  `/ta
 
 Type，as in "typing", because it allows us to express ourselves on the internet by typing our thoughts.  Echo implies feedback and resonance. It is also one of the most important and common functions in  PHP. After all, most PHP enthusiasts started their learning path typing `echo 'Hello World!;`.
 
-As the name indicates, Typecho is a blogging platform, that is released under the [GPL version 2 许可证](https://opensource.org/license/gpl-2-0/), built with PHP（PHP 7.4 and above required）can run on a variety of platforms and supports a variety of databases（Mysql / PostgreSQL / SQLite(.
+As the name indicates, Typecho is a blogging platform, that is released under the [GPL version 2 license](https://opensource.org/license/gpl-2-0/), built with PHP（PHP 7.4 and above required）can run on a variety of platforms and supports a variety of databases（Mysql / PostgreSQL / SQLite).
 
 ## About the documentation
 
